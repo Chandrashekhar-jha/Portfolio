@@ -1,0 +1,95 @@
+/* ==========================================================================
+   DESIGN TOKENS & ARCHITECTURAL VARIABLES
+   Chandrashekhar Jha — Portfolio Architecture
+   ========================================================================== */
+
+:root {
+  /* COLORS — Editorial Monochromatic High-Contrast Palette */
+  --color-bg: #070708;
+  --color-bg-subtle: #0f0f12;
+  --color-card: #131317;
+  --color-card-border: rgba(255, 255, 255, 0.07);
+  --color-fg: #f4f4f7;
+  --color-fg-muted: #8e8e99;
+  --color-fg-subtle: #52525b;
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-border-subtle: rgba(255, 255, 255, 0.04);
+  --color-accent: #38bdf8; /* Used very sparingly for active technical states */
+  --color-accent-subtle: rgba(56, 189, 248, 0.12);
+
+  /* TYPOGRAPHY FAMILIES */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* FLUID TYPOGRAPHY SCALE */
+  --text-display: clamp(2.5rem, 6.5vw, 6.5rem);
+  --text-h1: clamp(2rem, 4.5vw, 4rem);
+  --text-h2: clamp(1.5rem, 3.2vw, 2.75rem);
+  --text-h3: clamp(1.2rem, 2.2vw, 1.875rem);
+  --text-body-lg: clamp(1.05rem, 1.4vw, 1.25rem);
+  --text-body: clamp(0.9375rem, 1.1vw, 1rem);
+  --text-caption: clamp(0.8125rem, 0.9vw, 0.875rem);
+  --text-micro: clamp(0.6875rem, 0.75vw, 0.75rem);
+
+  /* SPACING SCALE */
+  --space-3xs: 0.25rem;  /* 4px */
+  --space-2xs: 0.5rem;   /* 8px */
+  --space-xs: 0.75rem;   /* 12px */
+  --space-sm: 1rem;      /* 16px */
+  --space-md: 1.5rem;    /* 24px */
+  --space-lg: 2.5rem;    /* 40px */
+  --space-xl: 4rem;      /* 64px */
+  --space-2xl: 6rem;     /* 96px */
+  --space-3xl: 10rem;    /* 160px */
+
+  /* GRID & LAYOUT TOKENS */
+  --max-width: 1440px;
+  --page-padding: var(--page-padding-desktop);
+  --page-padding-desktop: 3.5rem;
+  --page-padding-tablet: 2rem;
+  --page-padding-mobile: 1.25rem;
+
+  --grid-columns: var(--grid-columns-desktop);
+  --grid-columns-desktop: 12;
+  --grid-columns-tablet: 8;
+  --grid-columns-mobile: 4;
+
+  --grid-gap: var(--grid-gap-desktop);
+  --grid-gap-desktop: 2rem;
+  --grid-gap-tablet: 1.5rem;
+  --grid-gap-mobile: 1rem;
+
+  /* RADIUS TOKENS (Crisp, technical, minimal curve) */
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-full: 9999px;
+
+  /* MOTION & TRANSITION CONSTANTS */
+  --motion-fast: 150ms;
+  --motion-normal: 300ms;
+  --motion-slow: 600ms;
+  --motion-cinematic: 1000ms;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* RESPONSIVE TOKEN OVERRIDES */
+@media (max-width: 1024px) {
+  :root {
+    --page-padding: var(--page-padding-tablet);
+    --grid-columns: var(--grid-columns-tablet);
+    --grid-gap: var(--grid-gap-tablet);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-padding: var(--page-padding-mobile);
+    --grid-columns: var(--grid-columns-mobile);
+    --grid-gap: var(--grid-gap-mobile);
+  }
+}

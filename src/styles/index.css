@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Selection */
+::selection {
+  background: var(--color-fg);
+  color: var(--color-bg);
+}
+
+/* Accessible Focus Ring */
+:focus-visible {
+  outline: 1.5px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Architectural Utility Classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Grid Overlay Utility (for development & design system visualization) */
+.system-grid-bg {
+  background-size: 80px 80px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Editorial Noise Texture */
+.system-noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
