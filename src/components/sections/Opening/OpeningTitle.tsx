@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useCursor } from '@/hooks/useCursor';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
-import { siteConfig } from '@/config/siteConfig';
 import { EASING } from '@/lib/motion';
 
 export const OpeningTitle: React.FC = () => {
@@ -69,14 +68,50 @@ export const OpeningTitle: React.FC = () => {
             initial={{ opacity: 0, x: shouldReduceMotion ? 0 : -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: EASING.expoOut }}
-            className="flex flex-col gap-2 max-w-xl"
+            className="flex flex-col gap-3 max-w-xl"
           >
-            <div className="font-mono text-xs uppercase tracking-widest text-[var(--color-accent)]">
-              // WEB ENGINEERING & FULL-STACK ARCHITECTURE
+            <div className="font-mono text-xs uppercase tracking-widest text-[var(--color-accent)] font-semibold">
+              // WEB DEVELOPER / FULL-STACK DEVELOPER
             </div>
             <p className="font-sans text-base sm:text-lg text-[var(--color-fg-muted)] leading-relaxed font-normal">
-              {siteConfig.personal.focusArea}. Designing interfaces that prioritize experience, performance, and technical clarity.
+              I build practical web applications and full-stack systems with modern JavaScript technologies.
             </p>
+
+            {/* Subtle Channels Access */}
+            <div className="flex items-center gap-4 pt-1 font-mono text-xs text-[var(--color-fg-subtle)]">
+              <a
+                href="https://github.com/Chandrashekhar-jha"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setCursorVariant('pointer', 'GITHUB')}
+                onMouseLeave={resetCursor}
+                className="hover:text-[var(--color-accent)] transition-colors"
+              >
+                GitHub ↗
+              </a>
+              <span>•</span>
+              <a
+                href="https://www.linkedin.com/in/chandrashekhar-jha-b95240285/?isSelfProfile=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setCursorVariant('pointer', 'LINKEDIN')}
+                onMouseLeave={resetCursor}
+                className="hover:text-[var(--color-accent)] transition-colors"
+              >
+                LinkedIn ↗
+              </a>
+              <span>•</span>
+              <a
+                href="https://drive.google.com/file/d/1LlBLd3cdeU9sK--YxkOwURyArVCtfBk8/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setCursorVariant('pointer', 'RESUME')}
+                onMouseLeave={resetCursor}
+                className="hover:text-[var(--color-accent)] transition-colors"
+              >
+                Resume ↗
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>

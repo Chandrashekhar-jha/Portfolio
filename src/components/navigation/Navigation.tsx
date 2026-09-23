@@ -4,6 +4,7 @@ import { siteConfig } from '@/config/siteConfig';
 import { useScrollProgress } from '@/hooks/useScrollProgress';
 import { useCursor } from '@/hooks/useCursor';
 import { Label } from '@/components/typography/Label';
+import { IdentityCardModal } from './IdentityCardModal';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 
@@ -11,6 +12,7 @@ export const Navigation: React.FC = () => {
   const { isScrolled } = useScrollProgress();
   const { setCursorVariant, resetCursor } = useCursor();
   const [isOpen, setIsOpen] = useState(false);
+  const [isIdentityCardOpen, setIsIdentityCardOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('overview');
 
   // Keyboard navigation toggle (Escape to close, M to toggle)
@@ -31,6 +33,11 @@ export const Navigation: React.FC = () => {
 
   return (
     <>
+      <IdentityCardModal
+        isOpen={isIdentityCardOpen}
+        onClose={() => setIsIdentityCardOpen(false)}
+      />
+
       {/* Fixed Header Bar */}
       <header
         className={cn(
@@ -38,13 +45,15 @@ export const Navigation: React.FC = () => {
           isScrolled ? 'bg-[rgba(7,7,8,0.85)] backdrop-blur-md border-b border-[var(--color-border-subtle)] py-3' : 'bg-transparent'
         )}
       >
-        {/* Monogram / Brandmark System Status */}
+        {/* Monogram / Brandmark Identity Card Control */}
         <div className="pointer-events-auto flex items-center gap-3">
-          <a
-            href="#overview"
-            onMouseEnter={() => setCursorVariant('pointer', 'HOME')}
+          <button
+            type="button"
+            onClick={() => setIsIdentityCardOpen(true)}
+            onMouseEnter={() => setCursorVariant('pointer', 'PROFILE')}
             onMouseLeave={resetCursor}
-            className="group flex items-center gap-2.5 transition-colors focus:outline-none"
+            title="Click to view Chandrashekhar Jha Identity Card"
+            className="group flex items-center gap-2.5 transition-colors focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)] rounded p-1 -m-1"
           >
             {/* Custom Architectural Brand Mark */}
             <div className="relative w-8 h-8 rounded-[var(--radius-sm)] bg-[#0F0F12] border border-[var(--color-border)] group-hover:border-[var(--color-accent)] flex items-center justify-center transition-all duration-300 overflow-hidden">
@@ -56,15 +65,15 @@ export const Navigation: React.FC = () => {
               <span className="absolute top-1 right-1 w-1 h-1 rounded-full bg-[var(--color-accent)] animate-pulse" />
             </div>
 
-            <div className="flex flex-col min-w-0">
+            <div className="flex flex-col text-left min-w-0">
               <span className="font-mono text-[11px] sm:text-xs font-bold tracking-wider text-[var(--color-fg)] uppercase group-hover:text-[var(--color-accent)] transition-colors leading-none truncate max-w-[130px] xs:max-w-[170px] sm:max-w-none">
-                {siteConfig.personal.shortName}
+                C.JHA
               </span>
               <span className="font-mono text-[8px] sm:text-[9px] text-[var(--color-fg-subtle)] tracking-wider uppercase mt-1 truncate">
-                FULL-STACK // SYS
+                IDENTITY CARD
               </span>
             </div>
-          </a>
+          </button>
 
           <div className="hidden sm:flex items-center gap-2 pl-3 border-l border-[var(--color-border-subtle)]">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />

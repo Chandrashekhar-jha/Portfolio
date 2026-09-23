@@ -4,7 +4,6 @@ import { BackgroundHeader } from './BackgroundHeader';
 import { EducationEntry } from './EducationEntry';
 import { ProgressionSequence } from './ProgressionSequence';
 import { ProofLinks } from './ProofLinks';
-import { BackgroundNotes } from './BackgroundNotes';
 
 export const Background: React.FC = () => {
   return (
@@ -20,9 +19,6 @@ export const Background: React.FC = () => {
 
       {/* 03 — PROOF LINKS */}
       <ProofLinks />
-
-      {/* Transition to Section 07 */}
-      <BackgroundNotes />
     </Section>
   );
 };

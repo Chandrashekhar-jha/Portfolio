@@ -26,8 +26,8 @@ export const ProjectsHeader: React.FC = () => {
         viewport={{ once: true, margin: '-40px' }}
         className="flex items-center gap-3"
       >
-        <Label badge variant="accent" size="micro">03 / 08</Label>
-        <Label variant="subtle" size="micro">SELECTED WORK // ARCHIVE</Label>
+        <Label badge variant="accent" size="micro">03 / 06</Label>
+        <Label variant="subtle" size="micro">PROJECTS // FEATURED WORK</Label>
       </motion.div>
 
       {/* System Action Status */}

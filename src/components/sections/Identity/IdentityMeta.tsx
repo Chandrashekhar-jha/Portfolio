@@ -27,8 +27,8 @@ export const IdentityMeta: React.FC = () => {
         viewport={{ once: true, margin: '-40px' }}
         className="flex items-center gap-3"
       >
-        <Label badge variant="accent" size="micro">02 / 08</Label>
-        <Label variant="subtle" size="micro">IDENTITY // PHILOSOPHY</Label>
+        <Label badge variant="accent" size="micro">02 / 06</Label>
+        <Label variant="subtle" size="micro">ABOUT // CONTEXT</Label>
       </motion.div>
 
       {/* Role & Base Metadata */}

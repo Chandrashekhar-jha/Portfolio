@@ -135,13 +135,12 @@ export const siteConfig: SiteConfig = {
     },
   },
   navigation: [
-    { id: "overview", label: "Overview", path: "#overview", number: "01" },
-    { id: "identity", label: "Identity", path: "#identity", number: "02" },
-    { id: "work", label: "Selected Work", path: "#work", number: "03", badge: "06" },
-    { id: "stack", label: "Architecture & Stack", path: "#stack", number: "04" },
-    { id: "experiments", label: "Lab / Experiments", path: "#experiments", number: "05" },
-    { id: "proof", label: "Background / Proof", path: "#proof", number: "06" },
-    { id: "contact", label: "Terminal / Contact", path: "#contact", number: "07" },
+    { id: "overview", label: "HOME", path: "#overview", number: "01" },
+    { id: "identity", label: "ABOUT", path: "#identity", number: "02" },
+    { id: "work", label: "PROJECTS", path: "#work", number: "03", badge: "06" },
+    { id: "stack", label: "SKILLS", path: "#stack", number: "04" },
+    { id: "proof", label: "BACKGROUND", path: "#proof", number: "05" },
+    { id: "contact", label: "CONTACT", path: "#contact", number: "06" },
   ],
   projects: [
     {

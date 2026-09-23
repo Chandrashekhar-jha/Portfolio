@@ -27,11 +27,11 @@ export const ContactHeader: React.FC = () => {
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div className="flex items-center gap-3">
           <span className="font-mono text-xs tracking-widest text-[var(--color-accent)] font-bold uppercase">
-            07 / 08 — TERMINAL // CONTACT
+            06 / 06 — CONTACT
           </span>
           <span className="text-[var(--color-border-subtle)]">•</span>
           <Label variant="subtle" size="micro" className="uppercase">
-            SYSTEM TERMINAL
+            DIRECT CHANNELS
           </Label>
         </div>
 

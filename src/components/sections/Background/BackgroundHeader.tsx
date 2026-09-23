@@ -26,11 +26,11 @@ export const BackgroundHeader: React.FC = () => {
         className="flex items-center justify-between"
       >
         <div className="flex items-center gap-3">
-          <Label badge variant="accent" size="micro">06 / 08</Label>
-          <Label variant="subtle" size="micro">BACKGROUND // PROOF</Label>
+          <Label badge variant="accent" size="micro">05 / 06</Label>
+          <Label variant="subtle" size="micro">BACKGROUND // EDUCATION & PROGRESSION</Label>
         </div>
         <span className="font-mono text-xs text-[var(--color-fg-subtle)] uppercase">
-          EVIDENCE & PROGRESSION
+          GROWTH & VERIFICATION
         </span>
       </motion.div>
     </div>

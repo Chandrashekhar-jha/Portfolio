@@ -30,10 +30,10 @@ export const IdentityStatement: React.FC = () => {
         className="group relative"
       >
         <DisplayText size="h1" className="tracking-tight text-[var(--color-fg)] leading-[1.02]">
-          I BUILD FOR THE WEB.
+          WHO IS CHANDRASHEKHAR?
         </DisplayText>
         <DisplayText size="h2" editorial className="text-[var(--color-fg-muted)] mt-2 font-normal">
-          crafting responsive interfaces & scalable system architectures.
+          web developer focused on full-stack applications & practical systems.
         </DisplayText>
       </motion.div>
     </div>

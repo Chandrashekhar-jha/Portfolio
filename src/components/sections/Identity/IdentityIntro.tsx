@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { siteConfig } from '@/config/siteConfig';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { EASING } from '@/lib/motion';
 
@@ -28,23 +27,23 @@ export const IdentityIntro: React.FC = () => {
     >
       {/* Editorial Sub-Heading Column */}
       <div className="lg:col-span-4 space-y-3">
-        <div className="font-mono text-xs uppercase tracking-widest text-[var(--color-accent)]">
-          // ACADEMIC & STACK CONTEXT
+        <div className="font-mono text-xs uppercase tracking-widest text-[var(--color-accent)] font-semibold">
+          // ACADEMIC BACKGROUND
         </div>
         <p className="font-sans text-sm text-[var(--color-fg-muted)] leading-relaxed">
-          {siteConfig.personal.degree}. Focused on hands-on software construction and full-stack web development.
+          B.Tech in Artificial Intelligence & Machine Learning at JSPM University, Wagholi, Pune (2023–2027).
         </p>
       </div>
 
       {/* Main Narrative Introduction Column */}
       <div className="lg:col-span-8 space-y-6">
         <p className="font-sans text-lg sm:text-xl text-[var(--color-fg)] leading-relaxed font-normal">
-          I am a web developer specializing in full-stack engineering. My work focuses on building clean, performant user interfaces backed by scalable server architectures. I explore complex web challenges by writing modular code and testing functional ideas in real applications.
+          I'm a web developer focused on building full-stack applications, practical interfaces, and systems that solve real problems. I started with frontend development and gradually moved toward building complete applications across the frontend, backend, and database layers.
         </p>
 
         {/* Integrated Technology Reference Inline System */}
         <div className="pt-4 border-t border-[var(--color-border-subtle)] flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs text-[var(--color-fg-subtle)]">
-          <span className="uppercase tracking-wider text-[var(--color-fg-muted)]">CORE TOOLCHAIN //</span>
+          <span className="uppercase tracking-wider text-[var(--color-fg-muted)]">PRACTICAL TECH //</span>
           {techList.map((tech, index) => (
             <span key={tech} className="inline-flex items-center gap-2 text-[var(--color-fg)]">
               <span className="text-[var(--color-accent)] font-bold">0{index + 1}</span>

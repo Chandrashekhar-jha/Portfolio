@@ -3,7 +3,6 @@ import { Section } from '@/components/layout/Section';
 import { IdentityMeta } from './IdentityMeta';
 import { IdentityStatement } from './IdentityStatement';
 import { IdentityIntro } from './IdentityIntro';
-import { BuildSignature } from './BuildSignature';
 
 export const Identity: React.FC = () => {
   return (
@@ -11,7 +10,6 @@ export const Identity: React.FC = () => {
       <IdentityMeta />
       <IdentityStatement />
       <IdentityIntro />
-      <BuildSignature />
     </Section>
   );
 };

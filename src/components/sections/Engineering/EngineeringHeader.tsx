@@ -28,11 +28,11 @@ export const EngineeringHeader: React.FC = () => {
         className="flex items-center justify-between"
       >
         <div className="flex items-center gap-3">
-          <Label badge variant="accent" size="micro">04 / 08</Label>
-          <Label variant="subtle" size="micro">ENGINEERING // SYSTEM LAYERS</Label>
+          <Label badge variant="accent" size="micro">04 / 06</Label>
+          <Label variant="subtle" size="micro">SKILLS // TECHNICAL STACK</Label>
         </div>
         <span className="font-mono text-xs text-[var(--color-fg-subtle)] uppercase">
-          HOW I BUILD
+          CORE TECHNOLOGIES
         </span>
       </motion.div>
 

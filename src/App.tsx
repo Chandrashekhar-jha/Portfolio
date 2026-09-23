@@ -4,15 +4,11 @@ import { CursorInteraction } from '@/components/motion/CursorInteraction';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { Navigation } from '@/components/navigation/Navigation';
 import { PageContainer } from '@/components/layout/PageContainer';
-import { HiddenWorld } from '@/components/visual/HiddenWorld';
-import { Opening, Identity, Projects, Engineering, Lab, Background, Contact } from '@/components/sections';
+import { Opening, Identity, Projects, Engineering, Background, Contact } from '@/components/sections';
 
 export const App: React.FC = () => {
   return (
     <CursorProvider>
-      {/* PHASE 9.5 — DEVELOPER WORLD // INTERACTIVE 3D SYSTEM LAYER */}
-      <HiddenWorld />
-
       {/* Global Architectural Features */}
       <CursorInteraction />
       <ScrollProgress />
@@ -20,25 +16,22 @@ export const App: React.FC = () => {
 
       {/* Main Portfolio Container */}
       <PageContainer showGridLines>
-        {/* PHASE 2 — OPENING / LANDING EXPERIENCE */}
+        {/* 01 — HOME */}
         <Opening />
 
-        {/* PHASE 3 — IDENTITY / INTRODUCTION EXPERIENCE */}
+        {/* 02 — ABOUT */}
         <Identity />
 
-        {/* PHASE 4 — SELECTED WORK / PROJECT ARCHIVE */}
+        {/* 03 — PROJECTS */}
         <Projects />
 
-        {/* PHASE 5 — ENGINEERING / STACK ARCHITECTURE */}
+        {/* 04 — SKILLS */}
         <Engineering />
 
-        {/* PHASE 6 — LAB / EXPERIMENTS */}
-        <Lab />
-
-        {/* PHASE 7 — BACKGROUND / PROOF */}
+        {/* 05 — BACKGROUND */}
         <Background />
 
-        {/* PHASE 8 — TERMINAL // CONTACT */}
+        {/* 06 — CONTACT */}
         <Contact />
       </PageContainer>
     </CursorProvider>
