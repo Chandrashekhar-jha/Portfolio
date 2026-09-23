@@ -56,11 +56,11 @@ export const Navigation: React.FC = () => {
               <span className="absolute top-1 right-1 w-1 h-1 rounded-full bg-[var(--color-accent)] animate-pulse" />
             </div>
 
-            <div className="flex flex-col">
-              <span className="font-mono text-xs font-bold tracking-widest text-[var(--color-fg)] uppercase group-hover:text-[var(--color-accent)] transition-colors leading-none">
+            <div className="flex flex-col min-w-0">
+              <span className="font-mono text-[11px] sm:text-xs font-bold tracking-wider text-[var(--color-fg)] uppercase group-hover:text-[var(--color-accent)] transition-colors leading-none truncate max-w-[130px] xs:max-w-[170px] sm:max-w-none">
                 {siteConfig.personal.shortName}
               </span>
-              <span className="font-mono text-[9px] text-[var(--color-fg-subtle)] tracking-wider uppercase mt-1">
+              <span className="font-mono text-[8px] sm:text-[9px] text-[var(--color-fg-subtle)] tracking-wider uppercase mt-1 truncate">
                 FULL-STACK // SYS
               </span>
             </div>

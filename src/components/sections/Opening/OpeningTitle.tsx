@@ -39,7 +39,7 @@ export const OpeningTitle: React.FC = () => {
           animate="visible"
           onMouseEnter={() => setCursorVariant('pointer', 'IDENTITY')}
           onMouseLeave={resetCursor}
-          className="inline-block font-display font-extrabold uppercase text-[length:var(--text-display)] tracking-tighter leading-[0.9] text-[var(--color-fg)]"
+          className="inline-block font-display font-extrabold uppercase text-[clamp(1.65rem,7.5vw,6.5rem)] tracking-tighter leading-[0.9] text-[var(--color-fg)] break-all sm:break-normal max-w-full"
         >
           CHANDRASHEKHAR
         </motion.div>
@@ -56,7 +56,7 @@ export const OpeningTitle: React.FC = () => {
             transition={{ delay: 0.15 }}
             onMouseEnter={() => setCursorVariant('pointer', 'ARCHITECT')}
             onMouseLeave={resetCursor}
-            className="inline-block font-display font-extrabold uppercase text-[length:var(--text-display)] tracking-tighter leading-[0.9] text-[var(--color-fg)]"
+            className="inline-block font-display font-extrabold uppercase text-[clamp(1.65rem,7.5vw,6.5rem)] tracking-tighter leading-[0.9] text-[var(--color-fg)]"
           >
             JHA
             <span className="inline-block w-3 h-3 sm:w-5 sm:h-5 ml-2 bg-[var(--color-accent)] rounded-full align-baseline" />
