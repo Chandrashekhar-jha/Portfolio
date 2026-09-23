@@ -38,16 +38,34 @@ export const Navigation: React.FC = () => {
           isScrolled ? 'bg-[rgba(7,7,8,0.85)] backdrop-blur-md border-b border-[var(--color-border-subtle)] py-3' : 'bg-transparent'
         )}
       >
-        {/* Monogram / System Status */}
+        {/* Monogram / Brandmark System Status */}
         <div className="pointer-events-auto flex items-center gap-3">
           <a
             href="#overview"
             onMouseEnter={() => setCursorVariant('pointer', 'HOME')}
             onMouseLeave={resetCursor}
-            className="font-mono text-sm font-bold tracking-widest text-[var(--color-fg)] uppercase hover:text-[var(--color-accent)] transition-colors"
+            className="group flex items-center gap-2.5 transition-colors focus:outline-none"
           >
-            {siteConfig.personal.shortName} <span className="text-[var(--color-fg-subtle)]">// SYS</span>
+            {/* Custom Architectural Brand Mark */}
+            <div className="relative w-8 h-8 rounded-[var(--radius-sm)] bg-[#0F0F12] border border-[var(--color-border)] group-hover:border-[var(--color-accent)] flex items-center justify-center transition-all duration-300 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="square" strokeLinejoin="bevel" className="text-[var(--color-fg)] group-hover:text-[var(--color-accent)] transition-colors">
+                <path d="M4 6h8M8 6v12M8 18h-4" />
+                <path d="M14 6v8a4 4 0 0 1-4 4" />
+              </svg>
+              <span className="absolute top-1 right-1 w-1 h-1 rounded-full bg-[var(--color-accent)] animate-pulse" />
+            </div>
+
+            <div className="flex flex-col">
+              <span className="font-mono text-xs font-bold tracking-widest text-[var(--color-fg)] uppercase group-hover:text-[var(--color-accent)] transition-colors leading-none">
+                {siteConfig.personal.shortName}
+              </span>
+              <span className="font-mono text-[9px] text-[var(--color-fg-subtle)] tracking-wider uppercase mt-1">
+                FULL-STACK // SYS
+              </span>
+            </div>
           </a>
+
           <div className="hidden sm:flex items-center gap-2 pl-3 border-l border-[var(--color-border-subtle)]">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />
             <Label size="micro" variant="subtle">{siteConfig.personal.location}</Label>

@@ -419,9 +419,8 @@ export const siteConfig: SiteConfig = {
     },
   ],
   social: [
-    { platform: "GitHub", url: "https://github.com", handle: "@chandrashekhar-jha" },
-    { platform: "LinkedIn", url: "https://linkedin.com", handle: "chandrashekhar-jha" },
-    { platform: "Twitter / X", url: "https://x.com", handle: "@cjha_dev" },
+    { platform: "GitHub", url: "https://github.com/Chandrashekhar-jha", handle: "@chandrashekhar-jha" },
+    { platform: "LinkedIn", url: "https://www.linkedin.com/in/chandrashekhar-jha-b95240285/?isSelfProfile=true", handle: "chandrashekhar-jha" },
   ],
   contact: {
     email: "contact@chandrashekharjha.dev",

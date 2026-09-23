@@ -70,7 +70,7 @@ export const ProofLinks: React.FC = () => {
             LINKEDIN
           </div>
           <InteractiveLink
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/chandrashekhar-jha-b95240285/?isSelfProfile=true"
             external
             showArrow
             cursorText="LINKEDIN"
@@ -94,7 +94,9 @@ export const ProofLinks: React.FC = () => {
             RESUME
           </div>
           <InteractiveLink
-            href="#contact"
+            href="https://drive.google.com/file/d/1LlBLd3cdeU9sK--YxkOwURyArVCtfBk8/view?usp=drive_link"
+            external
+            showArrow
             cursorText="RESUME"
             variant="mono"
             className="text-[var(--color-accent)]"

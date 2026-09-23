@@ -19,7 +19,8 @@ export const ContactLinks: React.FC = () => {
   };
 
   const githubUrl = siteConfig.social.find(s => s.platform.toLowerCase().includes('github'))?.url || 'https://github.com/Chandrashekhar-jha';
-  const linkedinUrl = siteConfig.social.find(s => s.platform.toLowerCase().includes('linkedin'))?.url || 'https://linkedin.com';
+  const linkedinUrl = 'https://www.linkedin.com/in/chandrashekhar-jha-b95240285/?isSelfProfile=true';
+  const resumeUrl = 'https://drive.google.com/file/d/1LlBLd3cdeU9sK--YxkOwURyArVCtfBk8/view?usp=drive_link';
   const emailUrl = `mailto:${siteConfig.contact.email}`;
 
   const commands = [
@@ -51,8 +52,8 @@ export const ContactLinks: React.FC = () => {
       num: '[04]',
       label: 'RESUME',
       sublabel: 'TECHNICAL PROFILE OVERVIEW',
-      href: emailUrl,
-      external: false,
+      href: resumeUrl,
+      external: true,
       cursorText: 'GET RESUME',
     },
   ];
